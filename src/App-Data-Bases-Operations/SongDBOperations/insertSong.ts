@@ -1,6 +1,6 @@
 import {SongSchema} from "../Schemas/songSchema";
 import {connect, model} from 'mongoose';
-import {Song} from "../Interfaces/interfaces";
+import {Song} from "../Interfaces/songInterface";
 
 connect('mongodb://127.0.0.1:27017/music-db', {
   useNewUrlParser: true,

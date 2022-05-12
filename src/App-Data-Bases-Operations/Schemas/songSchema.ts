@@ -1,4 +1,4 @@
-import {Song} from "../Interfaces/interfaces";
+import {Song} from "../Interfaces/songInterface";
 import {Schema} from 'mongoose';
 let validator = require('validator');
 

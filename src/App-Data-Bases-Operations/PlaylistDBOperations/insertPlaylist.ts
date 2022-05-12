@@ -1,6 +1,6 @@
 import {PlaylistSchema} from "../Schemas/playlistSchema";
 import {connect, model} from 'mongoose';
-import {Playlists} from "../Interfaces/interfaces";
+import {Playlists} from "../Interfaces/playlistInterface";
 
 connect('mongodb://127.0.0.1:27017/music-db', {
   useNewUrlParser: true,

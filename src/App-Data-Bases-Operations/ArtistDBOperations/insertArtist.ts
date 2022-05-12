@@ -1,6 +1,6 @@
 import {ArtistSchema} from "../Schemas/artistSchema";
 import {connect, model} from 'mongoose';
-import {Artist} from "../Interfaces/interfaces";
+import {Artist} from "../Interfaces/artistInterface";
 
 connect('mongodb://127.0.0.1:27017/music-db', {
   useNewUrlParser: true,
