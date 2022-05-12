@@ -14,7 +14,6 @@ export const PlaylistSchema = new Schema<Playlists>({
   },
   duration: {
     type: String,
-    required: true,
   },
   genre: {
     type: [String],
