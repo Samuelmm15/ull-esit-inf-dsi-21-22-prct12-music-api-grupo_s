@@ -1,6 +1,7 @@
 import {Artist} from "../Interfaces/interfaces";
 import {SongSchema} from "./songSchema";
 import {Schema} from 'mongoose';
+let validator = require('validator');
 
 export const ArtistSchema = new Schema<Artist>({
   name: {
@@ -10,6 +11,13 @@ export const ArtistSchema = new Schema<Artist>({
   genre: {
     type: [String],
     required: true,
+    validate: (value: string[]) => {
+      value.forEach((genre) => {
+        if (!validator.isAlpha(genre)) {
+          throw new Error('Note title must contain alphabet characters');
+        }
+      });
+    },
     enum: ['Rock', 'Pop', 'Rap', 'Jazz', 'Country', 'Electronic',
       'Folk', 'Hip-Hop', 'Classic', 'Merengue', 'Metal', 'Electro',
       'Reggaeton', 'Salsa', 'Samba', 'Tango', 'Techno', 'Other'],
@@ -19,7 +27,13 @@ export const ArtistSchema = new Schema<Artist>({
     required: true,
   },
   monthlyListeners: {
-    type: Number,
+    type: String,
     required: true,
+    validate: (value: string) => {
+      if (!validator.isDecimal(value)) {
+        throw new Error('Monthly Listeners must be a number');
+      }
+    },
   },
 });
+

@@ -1,13 +1,15 @@
-import {Song} from "../Interfaces/interfaces";
+import {Playlists} from "../Interfaces/interfaces";
 import {Schema} from 'mongoose';
+import {SongSchema} from "./songSchema";
+let validator = require('validator');
 
-export const SongSchema = new Schema<Song>({
+export const PlaylistSchema = new Schema<Playlists>({
   name: {
     type: String,
     required: true,
   },
-  author: {
-    type: String,
+  songs: {
+    type: [SongSchema],
     required: true,
   },
   duration: {
@@ -17,16 +19,15 @@ export const SongSchema = new Schema<Song>({
   genre: {
     type: [String],
     required: true,
+    validate: (value: string[]) => {
+      value.forEach((genre) => {
+        if (!validator.isAlpha(genre)) {
+          throw new Error('Note title must contain alphabet characters');
+        }
+      });
+    },
     enum: ['Rock', 'Pop', 'Rap', 'Jazz', 'Country', 'Electronic',
       'Folk', 'Hip-Hop', 'Classic', 'Merengue', 'Metal', 'Electro',
       'Reggaeton', 'Salsa', 'Samba', 'Tango', 'Techno', 'Other'],
-  },
-  single: {
-    type: Boolean,
-    required: true,
-  },
-  reproductionNumber: {
-    type: Number,
-    required: true,
   },
 });

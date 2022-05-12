@@ -4,14 +4,14 @@ export interface Song {
   duration: string,
   genre: string[],
   single: boolean,
-  reproductionNumber: number
+  reproductionNumber: string
 }
 
 export interface Artist {
   name: string,
   genre: string[],
   publishedSongs: Song[],
-  monthlyListeners: number
+  monthlyListeners: string
 }
 
 export interface Playlists {
