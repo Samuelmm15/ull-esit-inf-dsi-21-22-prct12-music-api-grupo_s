@@ -24,7 +24,6 @@ const Fiestuki = new Playlist({
     single: true,
     reproductionNumber: '400',
   }],
-  duration: '2:30',
   genre: ['Reggaeton'],
 });
 
