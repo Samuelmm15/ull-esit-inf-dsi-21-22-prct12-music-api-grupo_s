@@ -1,4 +1,4 @@
-import {Artist} from "../interfaces";
+import {Artist} from "./Interfaces/interfaces";
 import {SongSchema} from "./songFormat";
 import {Document, connect, model, Schema} from 'mongoose';
 

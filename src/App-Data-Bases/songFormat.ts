@@ -1,4 +1,4 @@
-import {Song} from "../interfaces";
+import {Song} from "./Interfaces/interfaces";
 import {Document, connect, model, Schema} from 'mongoose';
 
 export const SongSchema = new Schema<Song>({

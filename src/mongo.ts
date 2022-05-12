@@ -2,9 +2,9 @@ import {MongoClient} from 'mongodb';
 // import {artistFormat} from './App-Data-Bases/artistFormat';
 // import {playlistFormat} from './App-Data-Bases/playlistFormat';
 // import {songFormat} from './App-Data-Bases/playlistFormat';
-import {Artist} from "./interfaces";
-import {Song} from './interfaces';
-import {Playlists} from './interfaces';
+import {Artist} from "./App-Data-Bases/Interfaces/interfaces";
+import {Song} from './App-Data-Bases/Interfaces/interfaces';
+import {Playlists} from './App-Data-Bases/Interfaces/interfaces';
 
 const dbURL = 'mongodb://127.0.0.1:27017';
 const dbName = 'music-db';
@@ -26,7 +26,7 @@ MongoClient.connect(dbURL, {
 
   return db.collection<Artist>('Artist').insertOne({
     name: 'Bad Bunny',
-    genre: ['Reggaeton'],
+    genre: ['Reggaeton', 'Pop'],
     publishedSongs: [{
       name: '120',
       author: 'Bad Bunny',
@@ -38,7 +38,7 @@ MongoClient.connect(dbURL, {
     monthlyListeners: 2000,
   });
 }).then((result) => {
-  console.log('Datos Añadidos');
+  console.log(`Se ha añadido un artista`);
 }).catch((error) => {
   console.log(error);
 });
