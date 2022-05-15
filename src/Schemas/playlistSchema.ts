@@ -6,14 +6,25 @@ let validator = require('validator');
 export const PlaylistSchema = new Schema<Playlists>({
   name: {
     type: String,
+    unique: true,
     required: true,
+    trim: true,
   },
   songs: {
     type: [SongSchema],
     required: true,
   },
   duration: {
+    required: true,
+    trim: true,
     type: String,
+    validate: (value: string) => {
+      let pattern = /(([0-9]*) hrs ([0-5]?[0-9]) min ([0-5]?[0-9]) seg)$/g;
+      let result = value.match(pattern)?.toString();
+      if (result === undefined) {
+        throw new Error('Time format not valid, try again with this format -> HH hrs MM min SS seg');
+      }
+    },
   },
   genre: {
     type: [String],

@@ -4,7 +4,7 @@ import {playlist} from '../../models/playlistModel';
 
 export const patchRouterPlaylist = express.Router();
 
-patchRouterPlaylist.patch('/playlists', (req, res) => {
+patchRouterPlaylist.patch('/music-db/playlists', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({
       error: 'A playlist name must be provided',

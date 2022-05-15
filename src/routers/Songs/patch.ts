@@ -1,12 +1,10 @@
 /* eslint-disable new-cap */
 import express from 'express';
-// import './db/mongoose';
 import {song} from '../../models/songModel';
 
 export const patchRouterSong = express.Router();
 
-// Actualización de elementos mediante query string
-patchRouterSong.patch('/songs', (req, res) => {
+patchRouterSong.patch('/music-db/songs', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({
       error: 'A song name must be provided',

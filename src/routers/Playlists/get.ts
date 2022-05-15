@@ -4,7 +4,7 @@ import {playlist} from '../../models/playlistModel';
 
 export const getRouterPlaylist = express.Router();
 
-getRouterPlaylist.get('/playlists', (req, res) => { // FUNCIONA FACHERO
+getRouterPlaylist.get('/music-db/playlists', (req, res) => { // FUNCIONA FACHERO
   if (!req.query.name) {
     res.status(400).send({
       error: 'A name must be provided',

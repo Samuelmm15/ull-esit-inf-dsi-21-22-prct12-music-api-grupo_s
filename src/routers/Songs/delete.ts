@@ -4,7 +4,7 @@ import {song} from '../../models/songModel';
 
 export const deleteRouterSong = express.Router();
 
-deleteRouterSong.delete('/songs', (req, res) => {
+deleteRouterSong.delete('/music-db/songs', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({
       error: 'A title must be provided',

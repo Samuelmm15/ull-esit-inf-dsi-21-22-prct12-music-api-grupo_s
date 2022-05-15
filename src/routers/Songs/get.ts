@@ -5,7 +5,7 @@ import {song} from '../../models/songModel';
 
 export const getRouterSong = express.Router();
 
-getRouterSong.get('/songs', (req, res) => {
+getRouterSong.get('/music-db/songs', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({
       error: 'A name must be provided',

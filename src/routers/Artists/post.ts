@@ -4,7 +4,7 @@ import {artist} from '../../models/artistModel';
 
 export const postRouterArtist = express.Router();
 
-postRouterArtist.post('/artists', (req, res) => {
+postRouterArtist.post('/music-db/artists', (req, res) => {
   if (!req.body) {
     res.status(400).send({
       error: 'A body must be provided',
