@@ -1,11 +1,11 @@
 /* eslint-disable new-cap */
 import express from 'express';
 // import './db/mongoose';
-import {song} from '../models/songModel';
+import {song} from '../../models/songModel';
 
 export const getRouterSong = express.Router();
 
-getRouterSong.get('/songs', (req, res) => { // FUNCIONA FACHERO
+getRouterSong.get('/songs', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({
       error: 'A name must be provided',

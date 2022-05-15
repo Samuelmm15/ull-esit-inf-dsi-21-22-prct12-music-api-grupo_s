@@ -1,11 +1,11 @@
 /* eslint-disable new-cap */
 import express from 'express';
 // import './db/mongoose';
-import {song} from '../models/songModel';
+import {song} from '../../models/songModel';
 
 export const postRouterSong = express.Router();
 
-postRouterSong.post('/songs', (req, res) => { // FUNCIONA FACHERO
+postRouterSong.post('/songs', (req, res) => {
   if (!req.body) {
     res.status(400).send({
       error: 'A body must be provided',
