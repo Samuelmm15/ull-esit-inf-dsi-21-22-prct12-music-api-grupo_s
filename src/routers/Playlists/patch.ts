@@ -15,7 +15,6 @@ patchRouterPlaylist.patch('/music-db/playlists', (req, res) => {
     const isValidUpdate =
           actualUpdates.every((update) => allowedUpdates.includes(update));
 
-    console.log(isValidUpdate);
     if (!isValidUpdate) {
       res.status(400).send({
         error: 'Update is not permitted',
