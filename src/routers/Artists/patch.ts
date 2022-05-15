@@ -25,7 +25,7 @@ patchRouterArtist.patch('/music-db/artists', (req, res) => {
         runValidators: true,
       }).then((artist) => {
         if (!artist) {
-          res.status(404).send( {
+          res.status(404).send({
             error: 'Artist not found',
           });
         } else {

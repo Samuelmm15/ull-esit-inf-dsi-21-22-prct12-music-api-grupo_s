@@ -25,7 +25,9 @@ patchRouterPlaylist.patch('/music-db/playlists', (req, res) => {
         runValidators: true,
       }).then((playlist) => {
         if (!playlist) {
-          res.status(404).send();
+          res.status(404).send({
+            error: 'Playlist not found',
+          });
         } else {
           res.send(playlist);
         }

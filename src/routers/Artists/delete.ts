@@ -12,12 +12,14 @@ deleteRouterArtist.delete('/music-db/artists', (req, res) => {
   } else {
     artist.findOneAndDelete({name: req.query.name.toString()}).then((artist) => {
       if (!artist) {
-        res.status(404).send();
+        res.status(404).send({
+          error: 'Artist not found',
+        });
       } else {
         res.send(artist);
       }
-    }).catch(() => {
-      res.status(400).send();
+    }).catch((error) => {
+      res.status(400).send(error);
     });
   }
 });

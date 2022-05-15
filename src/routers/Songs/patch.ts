@@ -25,7 +25,9 @@ patchRouterSong.patch('/music-db/songs', (req, res) => {
         runValidators: true,
       }).then((song) => {
         if (!song) {
-          res.status(404).send();
+          res.status(404).send({
+            error: 'Song not found',
+          });
         } else {
           res.send(song);
         }

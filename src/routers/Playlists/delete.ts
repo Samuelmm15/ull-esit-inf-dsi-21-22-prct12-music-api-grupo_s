@@ -12,12 +12,14 @@ deleteRouterPlaylist.delete('/music-db/playlists', (req, res) => {
   } else {
     playlist.findOneAndDelete({name: req.query.name.toString()}).then((playlist) => {
       if (!playlist) {
-        res.status(404).send();
+        res.status(404).send({
+          error: 'Playlist not found',
+        });
       } else {
         res.send(playlist);
       }
-    }).catch(() => {
-      res.status(400).send();
+    }).catch((error) => {
+      res.status(400).send(error);
     });
   }
 });
