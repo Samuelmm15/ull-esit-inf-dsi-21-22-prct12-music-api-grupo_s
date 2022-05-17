@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import {Song} from "../Interfaces/songInterface";
 import {Schema} from 'mongoose';
 let validator = require('validator');
@@ -21,7 +22,7 @@ export const SongSchema = new Schema<Song>({
     validate: (value: string) => {
       let pattern = /([0-5]?[0-9]):(?:[012345]\d)$/g;
       let result = value.match(pattern)?.toString();
-      if(result === undefined) {
+      if (result === undefined) {
         throw new Error('Time format not valid, try again with this format -> MM:SS');
       }
     },
