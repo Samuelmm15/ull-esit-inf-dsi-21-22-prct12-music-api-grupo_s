@@ -1,8 +1,7 @@
-/* eslint-disable prefer-const */
 import {Playlists} from "../Interfaces/playlistInterface";
 import {Song} from "../Interfaces/songInterface";
 import {Schema} from 'mongoose';
-let validator = require('validator');
+const validator = require('validator');
 
 const songPlaylistSchema = new Schema<Song>({
   name: {
@@ -20,8 +19,8 @@ const songPlaylistSchema = new Schema<Song>({
     required: true,
     trim: true,
     validate: (value: string) => {
-      let pattern = /([0-5]?[0-9]):(?:[012345]\d)$/g;
-      let result = value.match(pattern)?.toString();
+      const pattern = /([0-5]?[0-9]):(?:[012345]\d)$/g;
+      const result = value.match(pattern)?.toString();
       if (result === undefined) {
         throw new Error('Time format not valid, try again with this format -> MM:SS');
       }
@@ -60,7 +59,6 @@ const songPlaylistSchema = new Schema<Song>({
 export const PlaylistSchema = new Schema<Playlists>({
   name: {
     type: String,
-    unique: true,
     required: true,
     trim: true,
   },
@@ -73,8 +71,8 @@ export const PlaylistSchema = new Schema<Playlists>({
     trim: true,
     type: String,
     validate: (value: string) => {
-      let pattern = /(([0-9]*) hrs ([0-5]?[0-9]) min ([0-5]?[0-9]) seg)$/g;
-      let result = value.match(pattern)?.toString();
+      const pattern = /(([0-9]*) hrs ([0-5]?[0-9]) min ([0-5]?[0-9]) seg)$/g;
+      const result = value.match(pattern)?.toString();
       if (result === undefined) {
         throw new Error('Time format not valid, try again with this format -> HH hrs MM min SS seg');
       }

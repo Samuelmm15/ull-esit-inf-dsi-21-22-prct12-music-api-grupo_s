@@ -10,7 +10,7 @@ patchRouterPlaylist.patch('/music-db/playlists', (req, res) => {
       error: 'A playlist name must be provided',
     });
   } else {
-    const allowedUpdates = ['name', 'author'];
+    const allowedUpdates = ['name'];
     const actualUpdates = Object.keys(req.body);
     const isValidUpdate =
           actualUpdates.every((update) => allowedUpdates.includes(update));

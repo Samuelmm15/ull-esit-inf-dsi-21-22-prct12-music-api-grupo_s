@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import {Artist} from "../Interfaces/artistInterface";
 import {SongSchema} from "./songSchema";
 import {Schema} from 'mongoose';
