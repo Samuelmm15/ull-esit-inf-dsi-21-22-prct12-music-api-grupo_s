@@ -6,7 +6,6 @@ let validator = require('validator');
 export const SongSchema = new Schema<Song>({
   name: {
     type: String,
-    unique: true,
     required: true,
     trim: true,
   },
