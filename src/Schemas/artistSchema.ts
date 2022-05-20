@@ -1,6 +1,5 @@
 /* eslint-disable prefer-const */
 import {Artist} from "../Interfaces/artistInterface";
-// import {SongSchema} from "./songSchema";
 import {Schema} from 'mongoose';
 let validator = require('validator');
 
@@ -17,7 +16,7 @@ export const ArtistSchema = new Schema<Artist>({
     validate: (value: string[]) => {
       value.forEach((genre) => {
         if (!validator.isAlpha(genre)) {
-          throw new Error('Note title must contain alphabet characters');
+          throw new Error('Artist genre must contain alphabet characters');
         }
       });
     },
