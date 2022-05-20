@@ -1,8 +1,6 @@
-import {Song} from "./songInterface"
-
 export interface Playlists {
   name: string,
-  songs: Song[],
+  songs: string[],
   duration: string,
   genre: string[]
 }

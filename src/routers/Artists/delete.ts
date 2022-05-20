@@ -7,7 +7,7 @@ export const deleteRouterArtist = express.Router();
 deleteRouterArtist.delete('/music-db/artists', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({
-      error: 'A title must be provided',
+      error: 'A Name must be provided',
     });
   } else {
     artist.findOneAndDelete({name: req.query.name.toString()}).then((artist) => {

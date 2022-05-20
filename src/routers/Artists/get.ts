@@ -4,7 +4,7 @@ import {artist} from '../../models/artistModel';
 
 export const getRouterArtist = express.Router();
 
-getRouterArtist.get('/music-db/artists', (req, res) => { // FUNCIONA FACHERO
+getRouterArtist.get('/music-db/artists', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({
       error: 'A name must be provided',

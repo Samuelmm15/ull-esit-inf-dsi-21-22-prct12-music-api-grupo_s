@@ -4,10 +4,10 @@ import {playlist} from '../../models/playlistModel';
 
 export const getRouterPlaylist = express.Router();
 
-getRouterPlaylist.get('/music-db/playlists', (req, res) => { // FUNCIONA FACHERO
+getRouterPlaylist.get('/music-db/playlists', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({
-      error: 'A name must be provided',
+      error: 'A Title must be provided',
     });
   } else {
     const filter = req.query.name?{name: req.query.name.toString()}:{};
@@ -17,7 +17,7 @@ getRouterPlaylist.get('/music-db/playlists', (req, res) => { // FUNCIONA FACHERO
         res.send(playlist);
       } else {
         res.status(404).send({
-          error: 'The specified name does not exists',
+          error: 'The specified title does not exists',
         });
       }
     }).catch(() => {

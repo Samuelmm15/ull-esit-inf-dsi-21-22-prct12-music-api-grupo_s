@@ -36,7 +36,7 @@ export const SongSchema = new Schema<Song>({
     validate: (value: string[]) => {
       value.forEach((genre) => {
         if (!validator.isAlpha(genre)) {
-          throw new Error('Note title must contain alphabet characters');
+          throw new Error('Song genre must contain alphabet characters');
         }
       });
     },
