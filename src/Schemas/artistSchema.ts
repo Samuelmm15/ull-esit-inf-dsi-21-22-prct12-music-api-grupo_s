@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const */
 import {Artist} from "../Interfaces/artistInterface";
-import {SongSchema} from "./songSchema";
+// import {SongSchema} from "./songSchema";
 import {Schema} from 'mongoose';
 let validator = require('validator');
 
@@ -26,7 +26,7 @@ export const ArtistSchema = new Schema<Artist>({
       'Reggaeton', 'Salsa', 'Samba', 'Tango', 'Techno', 'Other'],
   },
   publishedSongs: {
-    type: [SongSchema],
+    type: [String],
     required: true,
   },
   monthlyListeners: {
