@@ -3,6 +3,9 @@ import {Artist} from "../Interfaces/artistInterface";
 import {Schema} from 'mongoose';
 let validator = require('validator');
 
+/**
+ * Artist Schema
+ */
 export const ArtistSchema = new Schema<Artist>({
   name: {
     type: String,

@@ -3,6 +3,9 @@ import {Song} from "../Interfaces/songInterface";
 import {Schema} from 'mongoose';
 let validator = require('validator');
 
+/**
+ * Song Schema
+ */
 export const SongSchema = new Schema<Song>({
   name: {
     type: String,

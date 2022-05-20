@@ -4,6 +4,9 @@ import {artist} from '../../models/artistModel';
 
 export const patchRouterArtist = express.Router();
 
+/**
+ * Patch HTTP Petition of Artists Collection
+ */
 patchRouterArtist.patch('/music-db/artists', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({

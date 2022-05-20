@@ -2,6 +2,9 @@ import {Playlists} from "../Interfaces/playlistInterface";
 import {Schema} from 'mongoose';
 const validator = require('validator');
 
+/**
+ * Playlist Schema
+ */
 export const PlaylistSchema = new Schema<Playlists>({
   name: {
     type: String,

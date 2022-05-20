@@ -4,6 +4,9 @@ import {artist} from '../../models/artistModel';
 
 export const getRouterArtist = express.Router();
 
+/**
+ * Get HTTP Petition of Artists Collection
+ */
 getRouterArtist.get('/music-db/artists', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({

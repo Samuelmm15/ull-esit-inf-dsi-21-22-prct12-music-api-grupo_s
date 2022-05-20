@@ -4,6 +4,9 @@ import {playlist} from '../../models/playlistModel';
 
 export const postRouterPlaylist = express.Router();
 
+/**
+ * Post HTTP Petition of Playlists Collection
+ */
 postRouterPlaylist.post('/music-db/playlists', (req, res) => {
   if (!req.body) {
     res.status(400).send({

@@ -4,6 +4,9 @@ import {playlist} from '../../models/playlistModel';
 
 export const getRouterPlaylist = express.Router();
 
+/**
+ * Get HTTP Petition of Playlists Collection
+ */
 getRouterPlaylist.get('/music-db/playlists', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({

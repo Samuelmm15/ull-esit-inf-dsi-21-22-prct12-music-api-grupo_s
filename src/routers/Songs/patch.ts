@@ -4,6 +4,9 @@ import {song} from '../../models/songModel';
 
 export const patchRouterSong = express.Router();
 
+/**
+ * Patch HTTP Petition of Songs Collection
+ */
 patchRouterSong.patch('/music-db/songs', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({

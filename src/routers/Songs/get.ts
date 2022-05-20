@@ -4,6 +4,9 @@ import {song} from '../../models/songModel';
 
 export const getRouterSong = express.Router();
 
+/**
+ * Get HTTP Petition of Songs Collection
+ */
 getRouterSong.get('/music-db/songs', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({

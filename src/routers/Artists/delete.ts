@@ -4,6 +4,9 @@ import {artist} from '../../models/artistModel';
 
 export const deleteRouterArtist = express.Router();
 
+/**
+ * Delete HTTP Petition of Artists Collection
+ */
 deleteRouterArtist.delete('/music-db/artists', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({

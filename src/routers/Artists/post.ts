@@ -4,6 +4,9 @@ import {artist} from '../../models/artistModel';
 
 export const postRouterArtist = express.Router();
 
+/**
+ * Post HTTP Petition of Artists Collection
+ */
 postRouterArtist.post('/music-db/artists', (req, res) => {
   if (!req.body) {
     res.status(400).send({

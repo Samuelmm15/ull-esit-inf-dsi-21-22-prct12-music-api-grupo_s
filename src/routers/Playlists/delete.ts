@@ -4,6 +4,9 @@ import {playlist} from '../../models/playlistModel';
 
 export const deleteRouterPlaylist = express.Router();
 
+/**
+ * Delete HTTP Petition of Playlists Collection
+ */
 deleteRouterPlaylist.delete('/music-db/playlists', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({

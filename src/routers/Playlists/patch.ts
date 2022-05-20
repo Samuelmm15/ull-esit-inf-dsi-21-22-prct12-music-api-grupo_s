@@ -4,6 +4,9 @@ import {playlist} from '../../models/playlistModel';
 
 export const patchRouterPlaylist = express.Router();
 
+/**
+ * Patch HTTP Petition of Playlists Collection
+ */
 patchRouterPlaylist.patch('/music-db/playlists', (req, res) => {
   if (!req.query.name) {
     res.status(400).send({

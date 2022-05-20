@@ -1,5 +1,30 @@
 {
     "entryPoints": [
+      "./src/db/databaseConnect.ts",
+      "./src/Interfaces/songInterface.ts",
+      "./src/Interfaces/artistInterface.ts",
+      "./src/Interfaces/playlistInterface.ts",
+      "./src/models/songModel.ts",
+      "./src/models/artistModel.ts",
+      "./src/models/playlistModel.ts",
+      "./src/Schemas/songSchema.ts",
+      "./src/Schemas/artistSchema.ts",
+      "./src/Schemas/playlistSchema.ts",
+      "./src/routers/Songs/post.ts",
+      "./src/routers/Songs/get.ts",
+      "./src/routers/Songs/patch.ts",
+      "./src/routers/Songs/delete.ts",
+      "./src/routers/Songs/default.ts",
+      "./src/routers/Artists/post.ts",
+      "./src/routers/Artists/get.ts",
+      "./src/routers/Artists/patch.ts",
+      "./src/routers/Artists/delete.ts",
+      "./src/routers/Artists/default.ts",
+      "./src/routers/Playlists/post.ts",
+      "./src/routers/Playlists/get.ts",
+      "./src/routers/Playlists/patch.ts",
+      "./src/routers/Playlists/delete.ts",
+      "./src/routers/Playlists/default.ts"
     ],
     "out": "./docs"
   }

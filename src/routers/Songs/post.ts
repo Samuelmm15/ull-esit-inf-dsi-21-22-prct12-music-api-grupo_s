@@ -5,6 +5,9 @@ import {song} from '../../models/songModel';
 
 export const postRouterSong = express.Router();
 
+/**
+ * Post HTTP Petition of Songs Collection
+ */
 postRouterSong.post('/music-db/songs', (req, res) => {
   if (!req.body) {
     res.status(400).send({
