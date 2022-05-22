@@ -10,8 +10,8 @@
     - [/// Routers](#-routers)
     - [/// Schemas](#-schemas)
     - [/// Aplicación](#-aplicación)
-- [Resumen de pruebas](#resumen-de-pruebas)
-- [Conclusión](#conclusión)
+  - [// Resumen de pruebas](#-resumen-de-pruebas)
+  - [// Conclusión](#-conclusión)
 ## // Introducción
 
 Para esta práctica se debe de implementar un API REST haciendo uso de Node/Express que permita llevar a cabo operaciones de creación, lectura, modificación y borrado (Create, Read, Update, Delete - CRUD) de canciones, artistas y playlists. Donde cada elemento tiene sus atributos correspondientes; toda está información se tendrá que guardar en una playlist. 
@@ -352,7 +352,7 @@ app.listen(port, () => {
 });
 ```
 
-# Resumen de pruebas
+## // Resumen de pruebas
 
 - Se han hecho pruebas con la extensión de ThunderClient y generando un json con todas las peticiones que se han realizado, y este json se puede importar como una colección de peticiones que se van a realizar cada vez que alguien quiera probar el código.
 
@@ -408,6 +408,6 @@ Se realiza un cambio del author `MF DOOM` a `Bad Bunny`.
 ?name=Rhymes Like Dimes
 ```
 
-# Conclusión
+## // Conclusión
 
 En conclusión, nos ha parecido una práctica bastante interesante, ya que nos ha permitido familiarizarnos aún más con el uso de MongoDB como sistema de base de datos, Mongoose para gestionarla desde Node.js y también nos ha permitido conocer algunas herramientas así como la extensión ThuderClient para el manejo de la entrada de datos y de la creación de una pequeña base de datos para poder guardar la información y hacer operaciones básicas con ella y la web Heroku para desplegar la API en la nube y hacer las pruebas de forma más sencilla, intuitiva, visual y rápida, con la opción de poder importar y/o exportar los resultados por si queremos también ejecutarlo en ThuderClient. Por último, se puede observar que nuestro código de la API REST está bien repartido en distintos directorios, de manera que cualquier persona que acceda al repositorio pueda distinguir con claridad de qué va el código aunque tengan poca idea de su funcionalidad; los podemos encontrar en cualquier directorio dentro de [src](src/) como ya se ha indicado previamente en el informe.
