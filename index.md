@@ -1,15 +1,15 @@
 # / Práctica 12 - API Node/Express de gestión de información musical
 
-- [Práctica 12 - API Node/Express de gestión de información musical](#práctica-12---api-nodeexpress-de-gestión-de-información-musical)
-  - [Introducción](#introducción)
-  - [Organización de los directorios](#organización-de-los-directorios)
-  - [Procedimiento](#procedimiento)
-    - [Conectividad](#conectividad)
-    - [Interfaces](#interfaces)
-    - [Modelos](#modelos)
-    - [Routers](#routers)
-    - [Schemas](#schemas)
-    - [Aplicación](#aplicación)
+- [/ Práctica 12 - API Node/Express de gestión de información musical](#-práctica-12---api-nodeexpress-de-gestión-de-información-musical)
+  - [// Introducción](#-introducción)
+  - [// Organización de los directorios](#-organización-de-los-directorios)
+  - [// Procedimiento](#-procedimiento)
+    - [/// Conectividad](#-conectividad)
+    - [/// Interfaces](#-interfaces)
+    - [/// Modelos](#-modelos)
+    - [/// Routers](#-routers)
+    - [/// Schemas](#-schemas)
+    - [/// Aplicación](#-aplicación)
 - [Resumen de pruebas](#resumen-de-pruebas)
 - [Conclusión](#conclusión)
 ## // Introducción
@@ -354,4 +354,60 @@ app.listen(port, () => {
 
 # Resumen de pruebas
 
+- Se han hecho pruebas con la extensión de ThunderClient y generando un json con todas las peticiones que se han realizado, y este json se puede importar como una colección de peticiones que se van a realizar cada vez que alguien quiera probar el código.
+
+- En estas pruebas realizamos todas peticiones que se indican en el enunciado (POST, GET, PATCH Y DELETE) y también se realizan otras pruebas para comprobar los posibles errores que tenemos en cuenta en nuestra API, además de así comprobar los posibles errores que se generan al introducir los valores de manera incorrecta.
+
+- Un ejemplo de petición POST puede ser:
+
+**body**:
+
+```json
+{
+  "name": "Rhymes Like Dimes",
+  "author": "MF DOOM",
+  "duration": "04:19",
+  "genre": ["Rap"],
+  "single": true,
+  "reproductionNumber": "49142581"
+}
+```
+
+- Un ejemplo de petición GET puede ser:
+
+**Query paramethers(name)**:
+
+```
+?name=Rhymes Like Dimes
+```
+
+- Un ejemplo de petición PATCH puede ser:
+
+**Query paramethers(name)**:
+
+```
+?name=Rhymes Like Dimes
+```
+
+**body**:
+
+```json
+{
+  "name": "Rhymes Like Dimes",
+  "author": "Bad Bunny"
+}
+```
+
+Se realiza un cambio del author `MF DOOM` a `Bad Bunny`.
+
+- Un ejemplo de petición DELETE puede ser:
+
+**Query paramethers(name)**:
+
+```
+?name=Rhymes Like Dimes
+```
+
 # Conclusión
+
+En conclusión, nos ha parecido una práctica bastante interesante, ya que nos ha permitido familiarizarnos aún más con el uso de MongoDB como sistema de base de datos, Mongoose para gestionarla desde Node.js y también nos ha permitido conocer algunas herramientas así como la extensión ThuderClient para el manejo de la entrada de datos y de la creación de una pequeña base de datos para poder guardar la información y hacer operaciones básicas con ella y la web Heroku para desplegar la API en la nube y hacer las pruebas de forma más sencilla, intuitiva, visual y rápida, con la opciónde poder importar y/o exportar los resultados por si queremos también ejecutarlo en ThuderClient. Por último, nuestro código cumple con los principios SOLID de Single Responsibility Principle y Open-Closed Principle; algunos ejemplos los podemos encontrar en cualquier directorio dentro de [src](src/) como ya se ha indicado previamente en el informe.

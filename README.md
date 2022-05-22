@@ -1,8 +1,8 @@
 # ull-esit-inf-dsi-21-22-prct12-music-api-grupo_s
 ull-esit-inf-dsi-21-22-prct12-music-api-grupo_s created by GitHub Classroom
 
-Group: S
-Names: Samuel, Felipe & Pablo
+Group: S \
+Names: Samuel, Felipe & Pablo \
 Course: Desarrollo de Sistemas Informáticos
 
 [![SonarCloud](https://github.com/ULL-ESIT-INF-DSI-2122/ull-esit-inf-dsi-21-22-prct12-music-api-grupo_s/actions/workflows/build.yml/badge.svg)](https://github.com/ULL-ESIT-INF-DSI-2122/ull-esit-inf-dsi-21-22-prct12-music-api-grupo_s/actions/workflows/build.yml)
